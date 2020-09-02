@@ -1,0 +1,20 @@
+{
+  "name": "monaco-bug",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build-workers": "sh build_workers.sh",
+    "clean": "rimraf dist && mkdir dist",
+    "copy-schema": "cp relative.json dist/relative.json",
+    "serve": "npm run clean && npm run copy-schema && npm run build-workers && parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.20.0"
+  }
+}
